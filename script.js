@@ -42,7 +42,7 @@ transition.classList.add("show");
 
 setTimeout(()=>{
 
-window.location.href="home.html";
+alert("🎉 It worked! Next we're going to build the birthday page ❤️");
 
 },1800);
 
