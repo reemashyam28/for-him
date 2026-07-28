@@ -259,3 +259,97 @@ html{
     padding:28px 22px;
   }
 }
+/* Restore passcode screen */
+
+.background{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#ffd6e8,#ffeaf4,#fff7fb);
+  z-index:-3;
+}
+
+.hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:-2;
+}
+
+.login-card{
+  position:fixed;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:24px;
+  background:linear-gradient(135deg,#ffd6e8,#ffeaf4,#fff7fb);
+  z-index:1000;
+}
+
+.login-card h1{
+  font-size:3rem;
+  color:#ff4f87;
+  margin:8px 0;
+}
+
+.login-card p{
+  color:#6b4b57;
+  margin-bottom:16px;
+}
+
+.dots{
+  display:flex;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.dots div{
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:#ffd1df;
+}
+
+#code{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+#unlock{
+  margin-top:10px;
+  padding:12px 28px;
+  border:none;
+  border-radius:999px;
+  background:#ff4f87;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+}
+
+#error{
+  margin-top:10px;
+  color:#d6336c;
+  min-height:20px;
+}
+
+#transition{
+  position:fixed;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#3a0011;
+  color:white;
+  z-index:2000;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .6s ease;
+}
+
+#transition.show{
+  opacity:1;
+}
