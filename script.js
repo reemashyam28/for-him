@@ -46,22 +46,23 @@ function createFlowerBurst() {
 function check() {
   if (input.value === CORRECT_CODE) {
 
-    loginScreen.classList.add("hide");
     createFlowerBurst();
 
     setTimeout(() => {
       transition.classList.add("show");
     }, 300);
 
-    setTimeout(() => {
-      transition.classList.remove("show");
-      mainContent.classList.add("show");
+   setTimeout(() => {
+  transition.classList.remove("show");
+  mainContent.classList.add("show");
 
-      music.play().catch(() => {
-        console.log("Autoplay blocked by browser");
-      });
-    }, 2300);
+  // completely remove the login screen
+  loginScreen.style.display = "none";
 
+  music.play().catch(() => {
+    console.log("Autoplay blocked by browser");
+  });
+}, 2300);
   } else {
     error.innerHTML = "Wrong code ❤️";
     input.value = "";
