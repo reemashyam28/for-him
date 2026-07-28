@@ -71,3 +71,4 @@ function check() {
     });
   }
 }
+const letterText = `Happy Boyfriend's Day, my love ❤️ If you're reading this, it means you made it through the little surprise I built just for you. I don't think a website could ever fully explain how much you mean to me, but I wanted to create a small place that holds our memories, our songs, and all the love I carry for you. Every photo here is a moment I never want to forget. Every song is a feeling I want to keep reliving with you. Thank you for being my safe place, my favorite person, and the one who makes even ordinary days feel special. I love you endlessly. 💌`; const typed = document.getElementById('typedLetter'); if (typed) { let i = 0; function typeLetter() { if (i < letterText.length) { typed.textContent += letterText.charAt(i); i++; setTimeout(typeLetter, 32); } } typeLetter(); }
