@@ -211,15 +211,7 @@ html{
   color:#e7c8d1;
 }
 
-.flower{ 
-  position:fixed; 
-  bottom:-120px; 
-  font-size:64px; 
-  animation:floatUp linear forwards; 
-  opacity:1; 
-  filter:drop-shadow(0 0 8px rgba(255,255,255,.35)); 
-  z-index:2600; 
-}
+.flower{ position:absolute; bottom:-120px; font-size:64px; animation:floatUp linear forwards; opacity:1; filter:drop-shadow(0 0 8px rgba(255,255,255,.35)); }
 
 @keyframes floatUp{
   from{
