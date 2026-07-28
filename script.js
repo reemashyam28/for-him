@@ -50,7 +50,7 @@ function check() {
 
     setTimeout(() => {
       transition.classList.add("show");
-    }, 300);
+    }, 80);
 
    setTimeout(() => {
   transition.classList.remove("show");
@@ -62,7 +62,7 @@ function check() {
   music.play().catch(() => {
     console.log("Autoplay blocked by browser");
   });
-}, 5200);
+}, 4200);
   } else {
     error.innerHTML = "Wrong code ❤️";
     input.value = "";
