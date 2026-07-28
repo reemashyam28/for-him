@@ -4,94 +4,70 @@ const input = document.getElementById("code");
 const dots = document.querySelectorAll(".dots div");
 const unlock = document.getElementById("unlock");
 const error = document.getElementById("error");
-const card = document.querySelector(".login-card");
+
+const loginScreen = document.getElementById("loginScreen");
 const transition = document.getElementById("transition");
+const mainContent = document.getElementById("mainContent");
+const flowers = document.getElementById("flowers");
+const music = document.getElementById("bgMusic");
 
 input.focus();
 
 document.body.addEventListener("click", () => input.focus());
 
 input.addEventListener("input", () => {
+  const value = input.value;
 
-let value = input.value;
+  dots.forEach((dot, i) => {
+    dot.style.background = i < value.length ? "#ff4f87" : "#ffd1df";
+  });
 
-dots.forEach((dot,i)=>{
-
-dot.style.background =
-i<value.length
-? "#ff4f87"
-: "#ffd1df";
-
-});
-
-if(value.length===6){
-
-check();
-
-}
-
+  if (value.length === 6) check();
 });
 
 unlock.onclick = check;
 
-function check(){
+function createFlowerBurst() {
+  for (let i = 0; i < 45; i++) {
+    const flower = document.createElement("div");
+    flower.className = "flower";
+    flower.innerHTML = Math.random() > 0.5 ? "🌸" : "🌺";
 
-if(input.value===CORRECT_CODE){
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = 4 + Math.random() * 4 + "s";
+    flower.style.fontSize = 18 + Math.random() * 22 + "px";
 
-transition.classList.add("show");
+    flowers.appendChild(flower);
 
-setTimeout(()=>{
-
-alert("🎉 It worked! Next we're going to build the birthday page ❤️");
-
-},1800);
-
-}else{
-
-error.innerHTML="Wrong code ❤️";
-
-card.classList.add("shake");
-
-navigator.vibrate?.(100);
-
-setTimeout(()=>{
-
-card.classList.remove("shake");
-
-},500);
-
-input.value="";
-
-dots.forEach(dot=>{
-
-dot.style.background="#ffd1df";
-
-});
-
+    setTimeout(() => flower.remove(), 9000);
+  }
 }
 
+function check() {
+  if (input.value === CORRECT_CODE) {
+
+    loginScreen.classList.add("hide");
+    createFlowerBurst();
+
+    setTimeout(() => {
+      transition.classList.add("show");
+    }, 300);
+
+    setTimeout(() => {
+      transition.classList.remove("show");
+      mainContent.classList.add("show");
+
+      music.play().catch(() => {
+        console.log("Autoplay blocked by browser");
+      });
+    }, 2300);
+
+  } else {
+    error.innerHTML = "Wrong code ❤️";
+    input.value = "";
+
+    dots.forEach(dot => {
+      dot.style.background = "#ffd1df";
+    });
+  }
 }
-
-const hearts=document.querySelector(".hearts");
-
-setInterval(()=>{
-
-const heart=document.createElement("span");
-
-heart.innerHTML=Math.random()>.5?"❤":"♡";
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.animationDuration=6+Math.random()*6+"s";
-
-heart.style.fontSize=16+Math.random()*18+"px";
-
-hearts.appendChild(heart);
-
-setTimeout(()=>{
-
-heart.remove();
-
-},12000);
-
-},350);
