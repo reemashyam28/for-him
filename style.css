@@ -282,3 +282,69 @@ button:hover{
     opacity:0; 
   } 
 }
+html{ 
+      scroll-behavior:smooth; 
+    } 
+    .scroll-wrap{ 
+      text-align:center; margin:10px 0 30px; 
+    } 
+    .scroll-btn{ 
+      display:inline-block; 
+      padding:12px 22px; 
+      border-radius:999px; 
+      background:rgba(255,255,255,.08); 
+      border:1px solid rgba(255,255,255,.18); 
+      color:#ffe7ef; 
+      text-decoration:none; 
+      backdrop-filter:blur(8px); 
+      transition:.25s ease; 
+    } 
+    .scroll-btn:hover{ 
+      transform:translateY(-2px); 
+      background:rgba(255,255,255,.14); 
+    } 
+    .playlist{ 
+      max-width:1000px; 
+      margin:70px auto 90px; 
+      padding:0 20px; 
+      text-align:center; 
+    } 
+    .playlist h2{ 
+      font-family:'Dancing Script',cursive; 
+      font-size:3rem; 
+      color:#ffb6c9; 
+      margin-bottom:6px; 
+    } 
+    .playlist-sub{ 
+      color:#e9cfd7; 
+      margin-bottom:28px; 
+    } 
+    .playlist-grid{
+      display:grid; 
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); 
+      gap:18px; 
+    } 
+    .track{ 
+      text-align:left; 
+      padding:18px; 
+      border-radius:24px; 
+      background:rgba(255,255,255,.08); 
+      border:1px solid rgba(255,255,255,.12); 
+      text-decoration:none; 
+      color:#fff; 
+      transition:.25s ease; 
+      box-shadow:0 12px 28px rgba(0,0,0,.22); 
+    } 
+    .track:hover{ 
+      transform:translateY(-4px); 
+      background:rgba(255,255,255,.12); 
+    } 
+    .track span{ 
+      display:block; 
+      font-weight:600; 
+      font-size:1.05rem; 
+      margin-bottom:6px; 
+    } 
+    .track small{ 
+      color:#e7c8d1; 
+    }
