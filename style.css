@@ -325,20 +325,4 @@ html{
   min-height:20px;
 }
 
-#transition{
-  position:fixed;
-  inset:0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#3a0011;
-  color:white;
-  z-index:2000;
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .6s ease;
-}
-
-#transition.show{
-  opacity:1;
-}
+.login-screen{ position:fixed; inset:0; display:flex; justify-content:center; align-items:center; background:linear-gradient(135deg,#ffd6e8,#ffeaf4,#fff7fb); z-index:3000; } .login-screen.hide{ display:none; } .transition{ position:fixed; inset:0; display:flex; justify-content:center; align-items:center; background:#3a0011; color:white; z-index:2500; opacity:0; pointer-events:none; transition:opacity .6s ease; } .transition.show{ opacity:1; } .main-content{ display:none; } .main-content.show{ display:block; }
