@@ -62,7 +62,7 @@ function check() {
   music.play().catch(() => {
     console.log("Autoplay blocked by browser");
   });
-}, 2300);
+}, 5200);
   } else {
     error.innerHTML = "Wrong code ❤️";
     input.value = "";
