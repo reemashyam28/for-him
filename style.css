@@ -165,7 +165,7 @@ button:hover{
 
 .gallery{ 
   position:relative; 
-  height:950px; 
+  height:1150px; 
   max-width:1200px; 
   margin:40px auto 60px; 
 } 
@@ -213,6 +213,21 @@ button:hover{
   top:600px; 
   left:430px; 
   transform:rotate(4deg); 
+}
+.gallery img:nth-child(7){ 
+  top:180px; 
+  left:520px; 
+  transform:rotate(-12deg); 
+} 
+.gallery img:nth-child(8){ 
+  top:520px; 
+  right:60px; 
+  transform:rotate(9deg); 
+} 
+.gallery img:nth-child(9){ 
+  top:720px; 
+  left:120px; 
+  transform:rotate(-6deg); 
 }
 
 .letter{ 
