@@ -325,4 +325,5 @@ html{
   min-height:20px;
 }
 
-.login-screen{ position:fixed; inset:0; display:flex; justify-content:center; align-items:center; background:linear-gradient(135deg,#ffd6e8,#ffeaf4,#fff7fb); z-index:3000; } .login-screen.hide{ display:none; } .transition{ position:fixed; inset:0; display:flex; justify-content:center; align-items:center; background:#3a0011; color:white; z-index:2500; opacity:0; pointer-events:none; transition:opacity .6s ease; } .transition.show{ opacity:1; } .main-content{ display:none; } .main-content.show{ display:block; }
+.login-card{ background:rgba(255,255,255,.88); border:1px solid rgba(255,255,255,.65); backdrop-filter:blur(16px); border-radius:32px; padding:40px 34px; width:min(90vw,420px); display:flex; flex-direction:column; align-items:center; text-align:center; box-shadow:0 24px 60px rgba(255,79,135,.18); }
+.ending{ text-align:center; padding:70px 20px 100px; } .ending h2{ font-family:'Dancing Script',cursive; font-size:3rem; color:#ffb6c9; }
