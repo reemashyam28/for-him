@@ -1,60 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You ❤️</title>
 
-<title>For You ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="background"></div>
+  <!-- Floating flowers -->
+  <div class="flowers" id="flowers"></div>
 
-<div class="hearts"></div>
+  <!-- Passcode screen -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="heart">❤️</div>
+      <h1>Just For You</h1>
+      <p>Enter the special code</p>
 
-<div class="login-card">
+      <div class="dots">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
 
-<h2>❤️</h2>
+      <input id="code" type="password" maxlength="6" inputmode="numeric" autocomplete="off">
 
-<h1>Just For You</h1>
+      <button id="unlock">Unlock</button>
+      <p id="error"></p>
+    </div>
+  </div>
 
-<p>Enter our special code</p>
+  <!-- Transition screen -->
+  <div class="transition" id="transition">
+    <h1>Welcome, Handsome ❤️</h1>
+  </div>
 
-<div class="dots">
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-</div>
+  <!-- Main scrapbook -->
+  <div class="main-content" id="mainContent">
 
-<input
-id="code"
-type="password"
-maxlength="6"
-inputmode="numeric"
-autocomplete="off"
-/>
+    <audio id="bgMusic" loop>
+      <source src="assets/music/the_mountain-love-481753.mp3" type="audio/mpeg">
+    </audio>
 
-<button id="unlock">
-Unlock</button>
+    <div class="hero">
+      <h1>Happy Boyfriend's Day, My Love 💫</h1>
+      <p>A little corner of the internet made just for you.</p>
+    </div>
 
-<p id="error"></p>
+    <div class="gallery">
+      <img src="assets/photos/WhatsApp Image 2026-07-27 at 11.54.07 PM.jpeg" alt="us">
+      <img src="assets/photos/image (1).jpg" alt="us">
+      <img src="assets/photos/image (2).jpg" alt="us">
+      <img src="assets/photos/image (3).jpg" alt="us">
+      <img src="assets/photos/image (4).jpg" alt="us">
+      <img src="assets/photos/image.jpg" alt="us">
+    </div>
 
-</div>
+    <div class="letter">
+      <h2>To You 💌</h2>
+      <p>
+        Happy boyfriend's day, my love. I don’t think a website could ever fully capture
+        how much you mean to me, but I wanted to make something that feels like us.
+      </p>
+      <p>
+        Thank you for every laugh, every late-night conversation, every tiny moment
+        that somehow became a memory I never want to lose.
+      </p>
+      <p>
+        I hope this year brings you everything you dream of — and I hope I get to
+        keep making memories with you through all of it.
+      </p>
+      <p>
+        I love you more than words can hold. ❤️
+      </p>
+    </div>
 
-<div id="transition">
-<h1>Welcome, Love ❤️</h1>
-</div>
+    <div class="ending">
+      <h2>Forever your biggest fan 🌸</h2>
+    </div>
 
-<script src="script.js"></script>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
