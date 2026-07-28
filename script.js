@@ -28,7 +28,7 @@ input.addEventListener("input", () => {
 unlock.onclick = check;
 
 function createFlowerBurst() {
-  for (let i = 0; i < 45; i++) {
+  for (let i = 0; i < 85; i++) {
     const flower = document.createElement("div");
     flower.className = "flower";
     flower.innerHTML = Math.random() > 0.5 ? "🌸" : "🌺";
