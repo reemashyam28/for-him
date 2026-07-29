@@ -27,21 +27,19 @@ input.addEventListener("input", () => {
 
 unlock.onclick = check;
 
-function createFlowerBurst() {
-  for (let i = 0; i < 120; i++) {
-    const flower = document.createElement("div");
-    flower.className = "flower";
-    flower.innerHTML = Math.random() > 0.5 ? "🌸" : "🌺";
-
-    flower.style.left = Math.random() * 100 + "vw";
-    flower.style.animationDuration = 3 + Math.random() * 2 + "s";
-    flower.style.fontSize = 18 + Math.random() * 22 + "px";
-
-    flowers.appendChild(flower);
-
-    setTimeout(() => flower.remove(), 9000);
-  }
-}
+function createFlowerBurst() { 
+  for (let i = 0; i < 140; i++) { 
+  const flower = document.createElement("div"); 
+    flower.className = "flower"; 
+    flower.innerHTML = Math.random() > 0.5 ? "🌸" : "🌺"; 
+    // random position across the ENTIRE screen 
+    flower.style.left = Math.random() * 100 + "vw"; 
+    flower.style.top = Math.random() * 100 + "vh"; 
+    // random size 
+    flower.style.fontSize = 22 + Math.random() * 34 + "px"; 
+    // random floating duration 
+    flower.style.animationDuration = 3 + Math.random() * 3 + "s"; 
+    flowers.appendChild(flower); setTimeout(() => flower.remove(), 6500); } }
 
 function check() {
   if (input.value === CORRECT_CODE) {
