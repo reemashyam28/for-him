@@ -215,10 +215,10 @@ html{
   position:fixed; 
   top:-120px; 
   font-size:72px; 
-  pointer-events:none; 
-  z-index:2600; 
+  pointer-events:none;
+  z-index:2400; 
   animation:petalFall linear forwards; 
-  filter:drop-shadow(0 6px 12px rgba(0,0,0,.18)); 
+  filter:drop-shadow(0 6px 12px rgba(0,0,0,.18));
 }
 
 @keyframes petalFall{
