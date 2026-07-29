@@ -46,23 +46,24 @@ function createFlowerBurst() {
 function check() {
   if (input.value === CORRECT_CODE) {
 
-    createFlowerBurst();
-
-    setTimeout(() => {
-      transition.classList.add("show");
-    }, 80);
-
-   setTimeout(() => {
-  transition.classList.remove("show");
-  mainContent.classList.add("show");
-
-  // completely remove the login screen
-  loginScreen.style.display = "none";
-
-  music.play().catch(() => {
-    console.log("Autoplay blocked by browser");
-  });
-}, 4200);
+    createFlowerBurst(); // show the welcome screen almost immediately 
+    
+    setTimeout(() => { 
+      transition.classList.add("show"); 
+    }, 120); // keep it visible for about 3.5 seconds 
+    
+    setTimeout(() => { 
+      transition.classList.remove("show"); 
+    }, 3700); 
+    
+    // wait for fade-out, then show scrapbook
+    setTimeout(() => { 
+      flowers.innerHTML = ""; 
+      mainContent.classList.add("show"); 
+      loginScreen.style.display = "none"; 
+      music.play().catch(() => {}); 
+    }, 4300);
+    
   } else {
     error.innerHTML = "Wrong code ❤️";
     input.value = "";
