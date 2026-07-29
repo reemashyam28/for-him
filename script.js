@@ -78,7 +78,7 @@ function check() {
 
 const letterText = `Happy Boyfriend's Day, my sweet boy ❤️ 
 
-If you're reading this, it means you made it through the little surprise I built just for you. I don't think a website could ever fully explain how much you mean to me, but I wanted to create a small place that holds our memories, our songs, and all the love I carry for you. 
+If you're reading this, it means you made it to the little surprise I built just for you. I don't think a website could ever fully explain how much you mean to me, but I wanted to create a small place that holds our memories, our songs, and all the love I carry for you. 
 
 From the moment I met you in that surprisingly well-developed 5th grade classroom, I fell in love with your geekiness, going on and on about something niche enough for everyone else to zone out. I didn't. I may not admit it as readily, but I've somehow loved you since I met you. As a friend, at first...but eventually, by some graceful fate (and your persistent efforts), that dynamic changed.
 You've truly and wholly enveloped my life with love and affection, and I hope that every ounce of kindness you've poured into the Universe comes flooding back onto you.
