@@ -63,7 +63,7 @@ function check() {
     // then show the scrapbook
     setTimeout(() => {
       flowers.innerHTML = "";
-      mainContent.classList.add("show";
+      mainContent.classList.add("show");
 
       music.play().catch(() => {});
     }, 4100);
