@@ -46,24 +46,28 @@ function createFlowerBurst() {
 function check() {
   if (input.value === CORRECT_CODE) {
 
-    createFlowerBurst(); // show the welcome screen almost immediately 
-    
-    setTimeout(() => { 
-      transition.classList.add("show"); 
-    }, 120); // keep it visible for about 3.5 seconds 
-    
-    setTimeout(() => { 
-      transition.classList.remove("show"); 
-    }, 3700); 
-    
-    // wait for fade-out, then show scrapbook
-    setTimeout(() => { 
-      flowers.innerHTML = ""; 
-      mainContent.classList.add("show"); 
-      loginScreen.style.display = "none"; 
-      music.play().catch(() => {}); 
-    }, 4300);
-    
+    // start petals immediately
+    createFlowerBurst();
+
+    // show welcome screen quickly
+    setTimeout(() => {
+      transition.classList.add("show");
+    }, 100);
+
+    // hide welcome screen after 3.2s
+    setTimeout(() => {
+      transition.classList.remove("show");
+    }, 3300);
+
+    // show scrapbook after fade-out
+    setTimeout(() => {
+      flowers.innerHTML = "";
+      mainContent.classList.add("show");
+      loginScreen.style.display = "none";
+
+      music.play().catch(() => {});
+    }, 3900);
+
   } else {
     error.innerHTML = "Wrong code ❤️";
     input.value = "";
@@ -73,6 +77,7 @@ function check() {
     });
   }
 }
+
 const letterText = `Happy Boyfriend's Day, my sweet boy ❤️ 
 
 If you're reading this, it means you made it through the little surprise I built just for you. I don't think a website could ever fully explain how much you mean to me, but I wanted to create a small place that holds our memories, our songs, and all the love I carry for you. 
