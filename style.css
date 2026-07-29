@@ -211,18 +211,32 @@ html{
   color:#e7c8d1;
 }
 
-.flower{ position:absolute; bottom:-120px; font-size:64px; animation:floatUp linear forwards; opacity:1; filter:drop-shadow(0 0 8px rgba(255,255,255,.35)); }
+.flower{ 
+  position:fixed; 
+  top:-120px; 
+  font-size:72px; 
+  pointer-events:none; 
+  z-index:2600; 
+  animation:petalFall linear forwards; 
+  filter:drop-shadow(0 6px 12px rgba(0,0,0,.18)); 
+}
 
-@keyframes floatUp{
-  from{
-    transform:translateY(0) scale(.6) rotate(0deg);
+@keyframes petalFall{
+  0%{
+    transform:translateY(-120px) translateX(0) rotate(0deg) scale(.8);
     opacity:0;
   }
-  15%{
+
+  10%{
     opacity:1;
   }
-  to{
-    transform:translateY(-140vh) scale(1.4) rotate(540deg);
+
+  50%{
+    transform:translateY(50vh) translateX(-40px) rotate(180deg) scale(1);
+  }
+
+  100%{
+    transform:translateY(115vh) translateX(40px) rotate(360deg) scale(1.1);
     opacity:0;
   }
 }
