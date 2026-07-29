@@ -49,24 +49,24 @@ function check() {
     // start petals immediately
     createFlowerBurst();
 
-    // show welcome screen quickly
-    setTimeout(() => {
-      transition.classList.add("show");
-    }, 100);
+    // hide the login screen right away
+    loginScreen.style.display = "none";
 
-    // hide welcome screen after 3.2s
+    // show welcome screen
+    transition.classList.add("show");
+
+    // keep it visible for 3.5 seconds
     setTimeout(() => {
       transition.classList.remove("show");
-    }, 3300);
+    }, 3500);
 
-    // show scrapbook after fade-out
+    // then show the scrapbook
     setTimeout(() => {
       flowers.innerHTML = "";
-      mainContent.classList.add("show");
-      loginScreen.style.display = "none";
+      mainContent.classList.add("show";
 
       music.play().catch(() => {});
-    }, 3900);
+    }, 4100);
 
   } else {
     error.innerHTML = "Wrong code ❤️";
