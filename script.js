@@ -28,13 +28,13 @@ input.addEventListener("input", () => {
 unlock.onclick = check;
 
 function createFlowerBurst() {
-  for (let i = 0; i < 85; i++) {
+  for (let i = 0; i < 120; i++) {
     const flower = document.createElement("div");
     flower.className = "flower";
     flower.innerHTML = Math.random() > 0.5 ? "🌸" : "🌺";
 
     flower.style.left = Math.random() * 100 + "vw";
-    flower.style.animationDuration = 4 + Math.random() * 4 + "s";
+    flower.style.animationDuration = 3 + Math.random() * 2 + "s";
     flower.style.fontSize = 18 + Math.random() * 22 + "px";
 
     flowers.appendChild(flower);
