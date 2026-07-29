@@ -233,6 +233,8 @@ html{
   } 
 }
 
+.notifications{ max-width:1100px; margin:90px auto; padding:0 20px; text-align:center; } .notifications h2{ font-family:'Dancing Script',cursive; font-size:3rem; color:#ffb6c9; margin-bottom:8px; } .notif-sub{ color:#e9cfd7; margin-bottom:28px; } .notif-board{ position:relative; min-height:1150px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:36px; backdrop-filter:blur(6px); overflow:hidden; } .notif-board img{ position:absolute; width:250px; border-radius:24px; box-shadow:0 18px 35px rgba(0,0,0,.45); transition:.3s ease; } .notif-board img:hover{ transform:scale(1.03) rotate(0deg) !important; } /* collage positions */ .n1{ top:70px; left:60px; transform:rotate(-7deg); } .n2{ top:120px; right:70px; transform:rotate(5deg); } .n3{ top:360px; left:260px; transform:rotate(3deg); } .n4{ top:520px; right:110px; transform:rotate(-8deg); } .n5{ bottom:140px; left:70px; transform:rotate(-4deg); } .n6{ bottom:70px; right:250px; transform:rotate(6deg); } /* little doodles */ .doodle{ position:absolute; color:#ff5c9a; font-size:28px; opacity:.85; } .d1{ top:110px; left:350px; } .d2{ top:500px; right:340px; } .d3{ bottom:220px; left:420px; } /* handwritten notes */ .note{ position:absolute; max-width:240px; color:#ffd7e4; font-family:'Dancing Script',cursive; font-size:1.5rem; line-height:1.2; text-align:left; opacity:.92; } .note1{ top:80px; right:220px; transform:rotate(-2deg); } .note2{ bottom:160px; right:30px; transform:rotate(4deg); }
+
 @media (max-width:768px){
 
   .hero h1{
