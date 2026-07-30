@@ -1,3 +1,4 @@
+const CORRECT_CODE = "031026";
 const input = document.getElementById("code"); const dots = document.querySelectorAll(".dots div"); const unlock = document.getElementById("unlock"); const error = document.getElementById("error"); const loginScreen = document.getElementById("loginScreen"); const transition = document.getElementById("transition"); const mainContent = document.getElementById("mainContent"); const flowers = document.getElementById("flowers"); input.focus(); document.body.addEventListener("click", () => input.focus());
 
 input.addEventListener("input", () => {
@@ -45,11 +46,13 @@ function check() {
     }, 2600);
 
     // then show the scrapbook
-    setTimeout(() => {
+    setTimeout(() => { 
       flowers.innerHTML = "";
-      mainContent.classList.add("show");
-
+      mainContent.classList.add("show"); 
+    }, 4100); 
+  
   } else {
+    
     error.innerHTML = "Wrong code ❤️";
     input.value = "";
 
