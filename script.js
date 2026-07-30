@@ -1,18 +1,4 @@
-const CORRECT_CODE = "031026";
-
-const input = document.getElementById("code");
-const dots = document.querySelectorAll(".dots div");
-const unlock = document.getElementById("unlock");
-const error = document.getElementById("error");
-
-const loginScreen = document.getElementById("loginScreen");
-const transition = document.getElementById("transition");
-const mainContent = document.getElementById("mainContent");
-const flowers = document.getElementById("flowers");
-
-input.focus();
-
-document.body.addEventListener("click", () => input.focus());
+const input = document.getElementById("code"); const dots = document.querySelectorAll(".dots div"); const unlock = document.getElementById("unlock"); const error = document.getElementById("error"); const loginScreen = document.getElementById("loginScreen"); const transition = document.getElementById("transition"); const mainContent = document.getElementById("mainContent"); const flowers = document.getElementById("flowers"); input.focus(); document.body.addEventListener("click", () => input.focus());
 
 input.addEventListener("input", () => {
   const value = input.value;
@@ -53,9 +39,10 @@ function check() {
     transition.classList.add("show");
 
     // keep it visible for 3.5 seconds
-    setTimeout(() => {
-      transition.classList.remove("show");
-    }, 3500);
+    setTimeout(() => { 
+      transition.classList.remove("show"); 
+      mainContent.classList.add("show"); 
+    }, 2600);
 
     // then show the scrapbook
     setTimeout(() => {
