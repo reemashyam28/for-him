@@ -9,7 +9,6 @@ const loginScreen = document.getElementById("loginScreen");
 const transition = document.getElementById("transition");
 const mainContent = document.getElementById("mainContent");
 const flowers = document.getElementById("flowers");
-const music = document.getElementById("bgMusic");
 
 input.focus();
 
@@ -62,9 +61,6 @@ function check() {
     setTimeout(() => {
       flowers.innerHTML = "";
       mainContent.classList.add("show");
-
-      music.play().catch(() => {});
-    }, 4100);
 
   } else {
     error.innerHTML = "Wrong code ❤️";
